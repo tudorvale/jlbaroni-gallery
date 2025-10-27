@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/project/jlbaroni-gallery/src/components/ProtectedImage.tsx"],"sourcesContent":["\"use client\";\n\nimport Image, { ImageProps } from \"next/image\";\n\ninterface ProtectedImageProps extends ImageProps {\n  disableRightClick?: boolean;\n}\n\nexport default function ProtectedImage({\n  disableRightClick = true,\n  className = \"\",\n  ...props\n}: ProtectedImageProps) {\n  return (\n    <Image\n      {...props}\n      className={`${className} ${disableRightClick ? 'no-select' : ''}`}\n      onContextMenu={disableRightClick ? (e) => e.preventDefault() : undefined}\n    />\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAQe,SAAS,eAAe,EACrC,oBAAoB,IAAI,EACxB,YAAY,EAAE,EACd,GAAG,OACiB;IACpB,qBACE,mMAAC,gIAAA,CAAA,UAAK;QACH,GAAG,KAAK;QACT,WAAW,GAAG,UAAU,CAAC,EAAE,oBAAoB,cAAc,IAAI;QACjE,eAAe,oBAAoB,CAAC,IAAM,EAAE,cAAc,KAAK;;;;;;AAGrE;KAZwB","debugId":null}}]
+}
